@@ -1,0 +1,41 @@
+{
+  "name": "Visualization Experiments",
+  "version": "1.0.0",
+  "description": "Visualization experimentations using different frameworks and technologies",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --hot --inline --history-api-fallback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderflink/visualization-experiments.git"
+  },
+  "author": "Alexander Flink",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderflink/visualization-experiments/issues"
+  },
+  "homepage": "https://github.com/alexanderflink/visualization-experiments#readme",
+  "dependencies": {
+    "gsap": "^2.0.2",
+    "vue": "^2.5.17",
+    "vue-carousel": "^0.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "npm": "^6.4.1",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "vue-loader": "^15.4.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7",
+    "write-file-webpack-plugin": "^4.3.2"
+  }
+}
