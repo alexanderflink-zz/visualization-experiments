@@ -1,14 +1,17 @@
 import p5 from 'p5'
 
-const experiment = (canvas) => {
-  return {
-    run() {
-      const myp5 = new p5()
-      p5.setup = () => {
-        console.log('hej')
-      }
-    }
-  }
+function experiment(canvas) {
+  const P5 = new p5(main)
+}
+
+function main(sketch) {
+  Object.assign(sketch, {
+    setup
+  })
+}
+
+function setup() {
+  console.log('hej')
 }
 
 export default experiment
