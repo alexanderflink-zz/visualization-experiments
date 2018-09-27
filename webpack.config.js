@@ -1,4 +1,3 @@
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const path = require('path')
@@ -16,24 +15,12 @@ module.exports = {
 	module : {
 		rules: [
 			{
-				test: /\.vue$/,
-				loader: 'vue-loader',
-				options: {
-					cacheBusting: true
-				}
-			},
-			{
 				test: /\.js$/,
 				loader: 'babel-loader'
 			},
 			{
 				test: /\.css$/,
 				use: [
-					{
-						loader: 'vue-style-loader', options: {
-							singleton: true
-						}
-					},
 					{loader: 'css-loader'}
 				]
 			},
@@ -62,8 +49,7 @@ module.exports = {
 	plugins: [
 		new CopyWebpackPlugin([{
 			from: './src/assets/', to: path.join(dist, 'assets'), force: true
-		}]),
-    new VueLoaderPlugin()
+		}])
   ],
 	devServer: {
 		// Open the browser window, set to false if you are in a headless browser environment.

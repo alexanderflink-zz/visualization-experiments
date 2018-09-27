@@ -1,5 +1,5 @@
 {
-  "name": "Visualization Experiments",
+  "name": "visualization-experiments",
   "version": "1.0.0",
   "description": "Visualization experimentations using different frameworks and technologies",
   "main": "index.js",
@@ -18,8 +18,8 @@
   "homepage": "https://github.com/alexanderflink/visualization-experiments#readme",
   "dependencies": {
     "gsap": "^2.0.2",
-    "vue": "^2.5.17",
-    "vue-carousel": "^0.11.0"
+    "p5": "^0.7.2",
+    "sanitize.css": "^7.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -31,8 +31,6 @@
     "npm": "^6.4.1",
     "style-loader": "^0.23.0",
     "url-loader": "^1.1.1",
-    "vue-loader": "^15.4.1",
-    "vue-template-compiler": "^2.5.17",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.7",
