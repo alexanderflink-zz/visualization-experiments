@@ -6,14 +6,15 @@ function experiment(canvas) {
   const p5 = new P5(main)
   function main(sketch) {
     const p5 = sketch
-    const m = new Mover(p5)
+    const m = new Mover(p5, p5.windowWidth / 2, p5.windowHeight / 2, 5)
 
     sketch.setup = () => {
-      p5.createCanvas(1080, 1080)
+      p5.createCanvas(p5.windowWidth, p5.windowHeight)
       p5.background(255)
     }
 
     sketch.draw = () => {
+      m.applyForce(new P5.Vector(0, 0.1))
       m.update()
     }
   }
