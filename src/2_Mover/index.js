@@ -14,6 +14,7 @@ function experiment(canvas) {
     }
 
     sketch.draw = () => {
+      p5.clear()
       m.applyForce(new P5.Vector(0, 0.1))
       m.update()
     }
