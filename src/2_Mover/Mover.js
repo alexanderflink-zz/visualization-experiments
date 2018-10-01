@@ -18,6 +18,20 @@ class Mover {
     const f = P5.Vector.div(force, this.mass)
     this.acceleration.add(f)
   }
+  isInside(rect) {
+    const {position} = this
+    if (position.x > rect.x && position.x < rect.x + rect.width && position.y > rect.y && position.y < rect.y + rect.height) return true
+    return false
+  }
+  drag(liquid) {
+    const speed = this.velocity.copy().mag()
+    const dragMagnitude = liquid.c * speed * speed
+    const drag = this.velocity.copy()
+    drag.mult(-1)
+    drag.normalize()
+    drag.mult(dragMagnitude)
+    this.applyForce(drag)
+  }
 }
 
 export default Mover
