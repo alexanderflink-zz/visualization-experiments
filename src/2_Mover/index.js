@@ -6,7 +6,7 @@ function experiment(canvas) {
   const p5 = new P5(main)
   function main(sketch) {
     const p5 = sketch
-    const m = new Mover()
+    const m = new Mover(p5)
 
     sketch.setup = () => {
       p5.createCanvas(1080, 1080)
