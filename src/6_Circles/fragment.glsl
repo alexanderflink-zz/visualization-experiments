@@ -19,15 +19,6 @@ float rect(float x, float y, float width, float height, vec2 position) {
   return borders;
 }
 
-float strokeRect(float x, float y, float width, float height, float thickness, vec2 position) {
-  float left = rect(x, y, thickness, height, position);
-  float top = rect(x, y + height - thickness, width, thickness, position);
-  float right = rect(x + width - thickness, y, thickness, height, position);
-  float bottom = rect(x, y, width, thickness, position);
-  float borders = left + top + right + bottom;
-  return borders;
-}
-
 void main() {
   vec2 position = gl_FragCoord.xy / u_resolution;
   vec2 u_mouse = u_mouse / u_resolution - 0.5;
@@ -44,7 +35,7 @@ void main() {
   float box = rect(0.0, 0.7, 0.2, 0.3, position);
   float box2 = rect(0.0, 0.0, 0.2, 0.65, position);
   float box3 = rect(0.25, 0.0, 0.3, 1.0, position);
-  float box4 = strokeRect(0.6, 0.05, 0.35, 0.9, 0.01, position);
+  float box4 = rect(0.6, 0.0, 0.35, 1.0, position);
   color = vec3(1.0, 0.0, 0.0) * box;
   color += vec3(1.0, 1.0, 0.8) * box2;
   color += vec3(0.0, 1.0, 1.0) * box3;
