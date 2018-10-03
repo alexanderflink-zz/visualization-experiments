@@ -22,10 +22,9 @@ function experiment(canvas) {
 
   function mouseMoveHandler(e) {
     uniforms.u_mouse = [
-      Math.min(Math.max(e.clientX / gl.canvas.width, 0), 1),
-      Math.min(Math.max(e.clientY / gl.canvas.height, 0), 1),
+      Math.min(Math.max(e.clientX, 0), gl.canvas.width),
+      Math.min(Math.max(e.clientY, 0), gl.canvas.height),
     ]
-    console.log('mouse: ' + uniforms.u_mouse)
   }
 
   function render() {
